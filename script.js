@@ -38,7 +38,7 @@ for (let day = 1; day <= daysInMonth; day++) {
     if (day === 13) {
       messageText = "χιχι, το πάτησες όντως! φιλί παντού <3";
     } else if (day === 14) {
-      messageText = "Second day energy!";
+      messageText = "σε χαϊδεύω όπως ο αέρας τα μαλλιά σου και σε φιλάω όπως ο ήλιος τα μαγουλα σου :*";
     } else {
       messageText = "Have a great day!";
     }
