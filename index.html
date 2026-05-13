@@ -1,61 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Calendar</title>
-    <style>
-        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background: #f4f4f9; }
-        .calendar { background: white; padding: 20px; border-radius: 10px; shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; }
-        .grid { display: grid; grid-template-columns: repeat(7, 40px); gap: 10px; margin-top: 20px; }
-        .day { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 5px; cursor: pointer; background: #eee; }
-        .day:hover { background: #ddd; }
-        .today { background: #007bff; color: white; font-weight: bold; }
-        .today:hover { background: #0056b3; }
-        #message { margin-top: 20px; font-weight: bold; color: #007bff; min-height: 20px; }
-    </style>
+  <meta charset="UTF-8">
+  <title>May Calendar xoxo</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<h1>May 2026</h1>
+
 <div class="calendar">
-    <h2 id="monthYear"></h2>
-    <div class="grid" id="calendarGrid"></div>
-    <div id="message"></div>
+  <div class="day-name">Mon</div>
+  <div class="day-name">Tue</div>
+  <div class="day-name">Wed</div>
+  <div class="day-name">Thu</div>
+  <div class="day-name">Fri</div>
+  <div class="day-name">Sat</div>
+  <div class="day-name">Sun</div>
 </div>
 
-<script>
-    const date = new Date();
-    const today = date.getDate();
-    const month = date.toLocaleString('default', { month: 'long' });
-    const year = date.getFullYear();
+<div id="calendar" class="calendar"></div>
 
-    document.getElementById('monthYear').innerText = `${month} ${year}`;
-
-    const grid = document.getElementById('calendarGrid');
-    const message Div = document.getElementById('message');
-
-    // Get number of days in current month
-    const daysInMonth = new Date(year, date.getMonth() + 1, 0).getDate();
-
-    for (let i = 1; i <= daysInMonth; i++) {
-        const daySquare = document.createElement('div');
-        daySquare.classList.add('day');
-        daySquare.innerText = i;
-
-        if (i === today) {
-            daySquare.classList.add('today');
-            daySquare.onclick = () => {
-                messageDiv.innerText = "γεια σου ζουζούνι! χιχι, φιλί παντού!";
-            };
-        } else {
-            daySquare.onclick = () => {
-                messageDiv.innerText = `This is day ${i}. Try clicking today's date!`;
-            };
-        }
-
-        grid.appendChild(daySquare);
-    }
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
