@@ -1,0 +1,32 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.day, .day-name {
+  padding: 15px;
+  border: 1px solid #ccc;
+}
+
+.day {
+  min-height: 80px;
+  position: relative;
+}
+
+.today {
+  background-color: #ffeb3b;
+}
+
+.message {
+  font-size: 12px;
+  margin-top: 5px;
+  color: red;
+}
