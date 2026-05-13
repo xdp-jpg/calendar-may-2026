@@ -31,7 +31,7 @@ for (let day = 1; day <= daysInMonth; day++) {
     const message = document.createElement("div");
     message.classList.add("message");
 
-    message.textContent = "χιχι, το πάτησες όντως!\nφιλί παντού <3";
+    message.textContent = "χιχι, το πάτησες όντως! φιλί παντού <3";
     cell.appendChild(message);
   }
 
