@@ -24,14 +24,27 @@ for (let day = 1; day <= daysInMonth; day++) {
   cell.classList.add("day");
   cell.innerHTML = `<strong>${day}</strong>`;
 
-  // Highlight today
+  // Check if this is today
   if (isCurrentMonth && today.getDate() === day) {
+
     cell.classList.add("today");
 
     const message = document.createElement("div");
     message.classList.add("message");
 
-    message.textContent = "χιχι, το πάτησες όντως! φιλί παντού <3";
+    // Daily message logic
+    let messageText = "";
+
+    if (day === 13) {
+      messageText = "χιχι, το πάτησες όντως! φιλί παντού <3";
+    } else if (day === 14) {
+      messageText = "Second day energy!";
+    } else {
+      messageText = "Have a great day!";
+    }
+
+    message.textContent = messageText;
+
     cell.appendChild(message);
   }
 
